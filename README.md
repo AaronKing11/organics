@@ -73,4 +73,4 @@ The **Gradient Boosting model** was chosen as the final model, as it outperforme
 We performed an initial analysis to identify key insights:
 - Younger customers (under 40) are more likely to purchase organic products.
 - Higher affluence correlates with a higher likelihood of buying organic products.
-- Gender analysis showed that customers with unknown gender are less likel
+- Gender analysis showed that customers with unknown gender are less likely to purchase organic foods.
