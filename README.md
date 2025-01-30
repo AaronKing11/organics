@@ -27,4 +27,50 @@ The dataset has over 22,000 observations, with some missing values that were add
 We performed an initial analysis to identify key insights:
 - Younger customers (under 40) are more likely to purchase organic products.
 - Higher affluence correlates with a higher likelihood of buying organic products.
+- Gender analysis showed that customers with unknown gender are less likely to buy organic products.
+
+### Model Development
+We created four models:
+1. **Decision Tree (Max depth = 25)**
+2. **Decision Tree (Max depth = 20)**
+3. **Random Forest**
+4. **Gradient Boosting**
+
+Each model was evaluated based on accuracy, precision, recall, and AUC.
+
+### Final Model
+The **Gradient Boosting model** was chosen as the final model, as it outperformed the others in three of the four metrics.
+
+## Key Findings
+- **Affluence and Age**: Customers with higher affluence and younger age are more likely to buy organic products.
+- **Gender Impact**: Customers with unknown gender are less likely to buy organic products.
+- **Region**: Urban affluent neighborhoods show the highest potential for organic product sales.
+
+## Example Customer Profile
+- **Example Buyer**: A young, affluent customer in their 30s, living in an upscale urban neighborhood, likely with young children.
+
+## Recommendations
+- **Target Younger, Affluent Customers**: Focus marketing campaigns on customers aged under 40 with higher affluence.
+- **Expand Availability in Affluent Urban Regions**: These areas present the highest sales potential.
+- **Personalized Promotions**: Use coupons and special promotions to engage potential organic product buyers.
+- **Address Gender Data Issues**: Investigate and address the barriers for customers with unknown gender information.
+
+## Technical Appendix
+### Data Preparation
+- Missing values were handled by dropping rows with missing data, leaving 16,408 observations.
+- Dummy variables were created for categorical variables.
+
+### Model Specifications
+- **Decision Tree #1**: Max depth = 25, Min samples = 80, ccp = 0.001
+- **Decision Tree #2**: Max depth = 20, Min samples = 10, ccp = 0.001
+- **Random Forest**: 150 estimators, Max depth = 50, Min samples = 30
+- **Gradient Boosting**: 100 estimators, learning rate = 0.1, Max depth = 3
+
+### Evaluation Metrics
+- The Gradient Boosting model showed the highest performance in three of the four evaluation metrics, making it the best choice for the final model.
+
+### Exploratory Data Analysis (EDA)
+We performed an initial analysis to identify key insights:
+- Younger customers (under 40) are more likely to purchase organic products.
+- Higher affluence correlates with a higher likelihood of buying organic products.
 - Gender analysis showed that customers with unknown gender are less likel
